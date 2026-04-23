@@ -113,6 +113,8 @@ section {
     cursor: pointer;
 }
 
+
+
 /* --- Hero Section --- */
 .hero {
     position: relative;
@@ -171,6 +173,36 @@ section {
     font-weight: 400;
 }
 
+/* Tech Stack Loop */
+.tech-stack-loop {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.tech-icons {
+    display: flex;
+    gap: 3rem;
+    width: max-content;
+    animation: loop 20s linear infinite;
+}
+
+.tech-icons i {
+    font-size: 2.5rem;
+    color: var(--muted-color);
+    transition: var(--transition-smooth);
+}
+
+.tech-icons i:hover {
+    color: var(--text-color);
+    transform: scale(1.2);
+}
+
+@keyframes loop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
 
 /* Hero Buttons */
 .hero-btns {
