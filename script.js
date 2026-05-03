@@ -15,20 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Initial check
 
-    /*
-    // --- Navbar Scroll Effect ---
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-    */
+
 
     // --- Active Link Highlighting ---
     const sections = document.querySelectorAll('section');
@@ -82,4 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Initial check
+
+
+
+
 });

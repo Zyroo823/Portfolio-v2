@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -21,8 +23,8 @@
             <a href="#home" class="logo">John Mar Aledon</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates/Tech Stack</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="menu-toggle">
@@ -67,6 +69,8 @@
                         <a href="#projects" class="btn-secondary">View Projects</a>
                         <a href="https://github.com/Zyroo823" target="_blank" class="btn-secondary"><i
                                 class="fab fa-github"></i> View GitHub</a>
+                        <a href="your-cv-file.pdf" class="btn-secondary" download>
+                            <i class="fas fa-download"></i> Download CV</a>
                     </div>
                 </div>
             </div>
@@ -75,79 +79,138 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title reveal">About Me</h2>
-            <div class="about-grid">
-                <div class="about-text reveal">
-                    <p>I am a dedicated BSIT student with a passion for building clean, efficient, and user-centric
-                        websites and systems. My journey in technology is driven by curiosity and a commitment to
-                        mastering the core foundations of software development.</p>
-                </div>
-                <div class="certificates-grid reveal">
+ <section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title reveal">Projects</h2>
 
-                    <div class="certificate-card">
-                        <i class="fas fa-certificate"></i>
-                        <h3>Web Development Certificate</h3>
-                        <p>Completed HTML, CSS, and JavaScript fundamentals.</p>
-                        <a href="#" target="_blank" class="cert-link">View Certificate</a>
-                    </div>
+        <div class="projects-grid">
 
-                    <div class="certificate-card">
-                        <i class="fas fa-certificate"></i>
-                        <h3>Python Programming</h3>
-                        <p>Covered basic to intermediate Python concepts.</p>
-                        <a href="#" target="_blank" class="cert-link">View Certificate</a>
-                    </div>
+            <!-- Project 1 -->
+            <div class="project-card reveal">
+                <div class="project-content">
 
-                    <div class="certificate-card">
-                        <i class="fas fa-certificate"></i>
-                        <h3>Data Structures & Algorithms</h3>
-                        <p>Focused on problem-solving and optimization techniques.</p>
-                        <a href="#" target="_blank" class="cert-link">View Certificate</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title reveal">Projects</h2>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card reveal">
                     <div class="project-info">
                         <h3>Daily Habit Tracker</h3>
-                        <p>A modern, visually stunning habit tracking web app with dark glassmorphic UI, streak
-                            counters, gamification, and offline support.</p>
-                        <a href="https://zyroo823.github.io/Daily-Habit-Tracker/" class="btn-minimal">View Project <i
-                                class="fas fa-arrow-right"></i></a>
+                        <p>
+                            A modern, visually stunning habit tracking web app with dark glassmorphic UI,
+                            streak counters, gamification, and offline support.
+                        </p>
+
+                        <div class="project-actions">
+                            <a href="https://zyroo823.github.io/Daily-Habit-Tracker/" target="_blank" class="btn-minimal">
+                                Live Demo <i class="fas fa-external-link-alt"></i>
+                            </a>
+
+                            <a href="https://github.com/Zyroo823/Daily-Habit-Tracker" target="_blank" class="btn-minimal secondary">
+                                GitHub Repo <i class="fab fa-github"></i>
+                            </a>
+                        </div>
                     </div>
+
                 </div>
-                <!-- Project 2 -->
-                <div class="project-card reveal">
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card reveal">
+                <div class="project-content">
+
                     <div class="project-info">
-                        <h3>Project 2</h3>
-                        <p>An interactive tool for visualizing complex data structures and algorithm performance.</p>
-                        <a href="#" class="btn-minimal">View Project <i class="fas fa-arrow-right"></i></a>
+                        <h3>Data Structure Visualizer</h3>
+                        <p>
+                            Interactive tool for visualizing complex data structures and algorithm performance.
+                        </p>
+
+                        <div class="project-actions">
+                            <a href="#" class="btn-minimal">
+                                Live Demo <i class="fas fa-external-link-alt"></i>
+                            </a>
+
+                            <a href="#" class="btn-minimal secondary">
+                                GitHub Repo <i class="fab fa-github"></i>
+                            </a>
+                        </div>
                     </div>
+
                 </div>
-                <!-- Project 3 -->
-                <div class="project-card reveal">
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card reveal">
+                <div class="project-content">
+
                     <div class="project-info">
-                        <h3>Project 3</h3>
-                        <p>A productivity application designed for students to track assignments and deadlines.</p>
-                        <a href="#" class="btn-minimal">View Project <i class="fas fa-arrow-right"></i></a>
+                        <h3>Student Productivity App</h3>
+                        <p>
+                            Productivity application designed for students to track assignments and deadlines.
+                        </p>
+
+                        <div class="project-actions">
+                            <a href="#" class="btn-minimal">
+                                Live Demo <i class="fas fa-external-link-alt"></i>
+                            </a>
+
+                            <a href="#" class="btn-minimal secondary">
+                                GitHub Repo <i class="fab fa-github"></i>
+                            </a>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
         </div>
+    </div>
+</section>
+
+
+    <!-- Certificate Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2 class="section-title reveal">Certificates</h2>
+            <div class="swiper cert-swiper reveal">
+                <div class="swiper-wrapper">
+                    <!-- Cert 1 -->
+                    <div class="swiper-slide cert-card">
+                        <div class="cert-image">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3>Full-Stack Web Development</h3>
+                            <p>Issued by Coursera / Meta</p>
+                        </div>
+                    </div>
+                    <!-- Cert 2 -->
+                    <div class="swiper-slide cert-card">
+                        <div class="cert-image">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3>JavaScript Algorithms</h3>
+                            <p>Issued by freeCodeCamp</p>
+                        </div>
+                    </div>
+                    <!-- Cert 3 -->
+                    <div class="swiper-slide cert-card">
+                        <div class="cert-image">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3>Database Management</h3>
+                            <p>Issued by IBM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
     </section>
+
+
+
+
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact">

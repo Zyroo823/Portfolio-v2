@@ -242,108 +242,120 @@ section {
     60% { transform: translateY(-5px) translateX(-50%); }
 }
 
-/* --- About Section --- */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-}
 
-.about-text p {
-    font-size: 1.2rem;
-    color: var(--muted-color);
-    margin-bottom: 2rem;
-}
-
-.certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.certificate-card {
-    background: var(--card);
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    transition: 0.3s ease;
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-.certificate-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-.certificate-card i {
-    font-size: 30px;
-    color: var(--accent);
-    margin-bottom: 10px;
-}
-
-.cert-link {
-    display: inline-block;
-    margin-top: 10px;
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-}
 
 
 
 /* --- Projects Section --- */
+/* Grid stays for layout */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 
+/* Card */
 .project-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    padding: 3rem 2rem;
-    position: relative;
-    overflow: hidden;
-    transition: var(--transition-smooth);
+    padding: 2.2rem;
+    border-radius: 16px;
+    transition: all 0.35s ease;
 }
 
+/* Subtle premium hover (no aggressive scaling) */
 .project-card:hover {
-    transform: scale(1.02);
+    transform: translateY(-6px);
     border-color: var(--text-color);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
 }
 
+/* FLEX LAYOUT INSIDE CARD */
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Typography hierarchy */
 .project-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
 }
 
 .project-info p {
     color: var(--muted-color);
-    margin-bottom: 2rem;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
+/* BUTTON ROW */
+.project-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+/* Primary action */
 .btn-minimal {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     border-bottom: 2px solid var(--text-color);
     padding-bottom: 4px;
+    transition: all 0.3s ease;
 }
 
+/* Secondary (GitHub) = softer hierarchy */
+.btn-minimal.secondary {
+    opacity: 0.7;
+    border-bottom: 2px solid transparent;
+}
+
+.btn-minimal.secondary:hover {
+    opacity: 1;
+    border-bottom: 2px solid var(--text-color);
+}
+
+/* Icon animation */
 .btn-minimal i {
     transition: transform 0.3s ease;
 }
 
 .btn-minimal:hover i {
-    transform: translateX(5px);
+    transform: translateX(4px);
 }
+/* Responsive: Stack on smaller screens */
+@media (max-width: 900px) {
+  .project-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .project-info h3 {
+    min-width: unset;
+  }
+  
+  .project-info p {
+    max-width: 100%;
+  }
+  
+  .project-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+
+
+
+
 
 /* --- Contact Section --- */
 .contact {
